@@ -7,7 +7,7 @@ from sqlalchemy.orm import declarative_base
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Create a SQLAlchemy engine using the DATABASE_URI
-engine = create_engine(DATABASE_URI, echo=True)
+engine = create_engine(DATABASE_URI)
 
 # Create a session factory
 Session = sessionmaker(bind=engine)
