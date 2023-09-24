@@ -24,15 +24,6 @@ def main():
                 password = input("Password: ")
                 user = login(email, password)
 
-            # create_task("incomplete", "work", "Test task", datetime(2023, 10, 10, 9, 43, 0), 3, 3012 )
-            # get_tasks(3012)
-            # modify_task(5006, "name", "hihih")
-
-            # while True:
-            #     answer = input("Do you want to continue? (yes/no) ")
-            #     if answer == "no":
-            #         break
-
 
         elif welcome == "2":
             name = input("Insert your name here: ")

@@ -1,3 +1,5 @@
+import csv
+
 from models import Tasks, Session
 from sqlalchemy import desc, asc, and_
 
@@ -84,4 +86,29 @@ def delete_task(uid, tid):
         print("The task does not exist in your scope. Please try again.")
         return False
 
+
+def export_tasks_to_csv(tasks, file_path):
+    # Define the fieldnames for the CSV file (column names)
+    fieldnames = ['tid', 'status', 'category', 'name', 'date', 'deadline', 'priority', 'userId']
+
+    # Open the CSV file for writing
+    with open(file_path, 'w', newline='') as csvfile:
+        # Create a CSV writer object
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        # Write the header (field names) to the CSV file
+        writer.writeheader()
+
+        # Write each task as a row in the CSV file
+        for task in tasks:
+            writer.writerow({
+                'tid': task.tid,
+                'status': task.status,
+                'category': task.category,
+                'name': task.name,
+                'date': task.date,
+                'deadline': task.deadline,
+                'priority': task.priority,
+                'userId': task.userId
+            })
 
