@@ -10,13 +10,12 @@ def create_task(status, category, name, deadline, priority, userId):
     task = Tasks(status, category, name, deadline, priority, userId)
     session.add(task)
     session.commit()
-    return "The task has been successfully created."
+    print("The task has been successfully created.")
 
 
 def get_tasks(uid):
     result = session.query(Tasks).filter_by(userId=uid).limit(10)
-    for r in result:
-        print(r)
+    return result
 
 
 def order_tasks_by(uid, order_param, ascending=True):
