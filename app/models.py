@@ -1,5 +1,4 @@
 # models.py
-from datetime import datetime
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, func, ForeignKey
 from sqlalchemy.orm import sessionmaker
 from config import DATABASE_URI
@@ -61,6 +60,7 @@ class Tasks(Base):
     userId = Column(Integer, ForeignKey("users.uid"))
 
     def __init__(self, status, category, name, deadline, priority, userId):
+        self.tid = None
         self.status = status
         self.category = category
         self.name = name
@@ -69,7 +69,8 @@ class Tasks(Base):
         self.userId = userId
 
     def __repr__(self):
-        return f"Task: {self.name} \n" \
+        return f"Task id: {self.tid} \n" \
+               f"Task: {self.name} \n" \
                f"Category: {self.category} \n" \
                f"Created on: {self.date} \n" \
                f"Status: {self.status} \n" \

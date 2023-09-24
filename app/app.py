@@ -1,4 +1,6 @@
 from authentication import signup, login
+from tasks import filter_tasks_by, order_tasks_by, delete_task, create_task, modify_task, get_tasks
+from datetime import datetime
 
 
 def welcome_message():
@@ -22,10 +24,14 @@ def main():
                 password = input("Password: ")
                 user = login(email, password)
 
-            while True:
-                answer = input("Do you want to continue? (yes/no) ")
-                if answer == "no":
-                    break
+            # create_task("incomplete", "work", "Test task", datetime(2023, 10, 10, 9, 43, 0), 3, 3012 )
+            # get_tasks(3012)
+            # modify_task(5006, "name", "hihih")
+
+            # while True:
+            #     answer = input("Do you want to continue? (yes/no) ")
+            #     if answer == "no":
+            #         break
 
 
         elif welcome == "2":
