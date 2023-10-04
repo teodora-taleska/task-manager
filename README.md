@@ -1,10 +1,9 @@
-# Task manager
+# Project Title: Task Manager
 
 Link to youtube: https://youtu.be/IgUcO-DDYWM
 
-## Project Title: Task Manager
 
-### Description
+## Description
 
 The Task Manager is a Python-based application that leverages Object-Oriented Programming to create an efficient task management system.
 
