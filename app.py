@@ -1,5 +1,5 @@
-from authentication import signup, login
-from tasks import filter_tasks_by, order_tasks_by, delete_task, create_task, modify_task, get_tasks, export_tasks_to_csv
+from app.authentication import signup, login
+from app.tasks import filter_tasks_by, order_tasks_by, delete_task, create_task, modify_task, get_tasks, export_tasks_to_csv
 from datetime import datetime
 
 

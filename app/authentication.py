@@ -1,4 +1,4 @@
-from models import Users, Session
+from .models import Users, Session
 
 session = Session()
 

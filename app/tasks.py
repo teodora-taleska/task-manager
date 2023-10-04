@@ -1,6 +1,6 @@
 import csv
 
-from models import Tasks, Session
+from .models import Tasks, Session
 from sqlalchemy import desc, asc, and_
 
 session = Session()
